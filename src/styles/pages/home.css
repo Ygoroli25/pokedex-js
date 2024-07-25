@@ -5,7 +5,7 @@
 
 .list-pokemons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.45rem;
   position: relative;
 }
@@ -23,6 +23,10 @@
 
 .pokemon h2 {
   font-size: 1.15rem;
+}
+
+.pokemon h2::first-letter {
+  text-transform: uppercase;
 }
 
 .pokemon img {
@@ -55,4 +59,3 @@
   font-size: 0.75rem;
   background: rgba(0, 0, 0, 0.2);
 }
-

@@ -1,15 +1,20 @@
 function pokemonToLi(pokemon) {
   return `
-  <li class="pokemon">
-        <span class="pokemon-id">#001</span>
+  <li class="pokemon ${pokemon.type}">
+        <span class="pokemon-id"># ${pokemon.id}</span>
         <h2>${pokemon.name}</h2>
         <div class="pokemon-detail">
           <ol class="types">
-            <li class="type">Glass</li>
-            <li class="type">Poison</li>
+            ${pokemon.types
+              .map(
+                (type) => `
+    <li class="type">${type}</li>
+  `
+              )
+              .join("")}
           </ol>
         </div>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
+        <img src="${pokemon.photo}" alt="${pokemon.name}">
       </li>
   `;
 }
@@ -19,6 +24,7 @@ const pokemonList = document.getElementById("pokemonList");
 pokeApi
   .getPokemons()
   .then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(pokemonToLi).join("");
+    const newHtml = pokemons.map(pokemonToLi).join("");
+    pokemonList.innerHTML = newHtml;
   })
   .catch((error) => console.log(error));
