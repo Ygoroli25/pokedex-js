@@ -14,7 +14,6 @@
   align-self: center;
   padding: 1.25rem 1rem;
   border-radius: 0.4rem;
-  background: #14a06f;
   color: #ffffff;
   height: 180px;
   position: relative;
@@ -23,11 +22,10 @@
 
 .pokemon h2 {
   font-size: 1.15rem;
+  text-transform: capitalize;
 }
 
-.pokemon h2::first-letter {
-  text-transform: uppercase;
-}
+
 
 .pokemon img {
   width: 100px;
@@ -57,5 +55,6 @@
   padding: 0.2rem 0.4rem;
   border-radius: 0.4rem;
   font-size: 0.75rem;
-  background: rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+  filter: brightness(1.1);
 }

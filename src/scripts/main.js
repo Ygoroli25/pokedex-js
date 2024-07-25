@@ -8,7 +8,7 @@ function pokemonToLi(pokemon) {
             ${pokemon.types
               .map(
                 (type) => `
-    <li class="type">${type}</li>
+    <li class="type ${type}">${type}</li>
   `
               )
               .join("")}
