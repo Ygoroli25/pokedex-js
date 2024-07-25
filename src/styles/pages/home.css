@@ -1,6 +1,6 @@
 .title {
   font-size: 3rem;
-  margin: 2.5rem 0;
+  margin-bottom:2rem;
 }
 
 .list-pokemons {
@@ -57,4 +57,21 @@
   font-size: 0.75rem;
   font-weight: 300;
   filter: brightness(1.1);
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.pagination button {
+  background-color: #6c79db;
+  border-radius: .25rem;
+  border: none;
+  padding: .6rem 2rem;
+  color: #ffffff;
+  cursor: pointer;
 }
